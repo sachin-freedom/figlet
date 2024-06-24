@@ -1,0 +1,9 @@
+.card{
+    min-width: 1200px;
+    max-width: 1500px;
+    text-align: center;
+}
+
+body{
+    background-color: #F5F7F8;
+}
