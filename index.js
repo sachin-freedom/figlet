@@ -1,8 +1,13 @@
 const figlet = require("figlet");
 const express = require("express");
 const path = require("path");
-
+const port = process.env.PORT || 3000;
 const app = express();
+
+
+require('dotenv').config();
+
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -35,6 +40,6 @@ app.get("/", (req, res) => {
   sachin ='';
 });
 
-app.listen(3000, () => {
-  console.log("Listening on port 3000");
+app.listen(port, () => {
+  console.log(`Listnening on port ${port}`);
 });
